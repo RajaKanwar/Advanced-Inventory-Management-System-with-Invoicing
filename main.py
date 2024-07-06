@@ -7,6 +7,7 @@ def main():
     sales_returns = SalesReturnsTracking()
 
     while True:
+        # work or create a command-line interface (CLI) from the line
         print("\n1. View Products")
         print("2. Add Product")
         print("3. Update Product")
@@ -59,7 +60,7 @@ def main():
             sale = next((s for s in sales_returns.sales if s.transaction_id == transaction_id), None)  # Go to IF condition if transaction ID matches product transaction ID
             if sale:
                 invoice = Invoice(sale)
-                invoice.generate_invoice()
+                invoice.generate_invoice() # calls generate_invoice in invoice.py file
             else:
                 print("Sale not found!")
         elif choice == '8':
