@@ -55,7 +55,8 @@ def main():
             inventory_mgmt.update_product(product_id, quantity=quantity)
         elif choice == '7':
             transaction_id = input("Enter Sale Transaction ID: ")
-            sale = next((s for s in sales_returns.sales if s.transaction_id == transaction_id), None)
+        
+            sale = next((s for s in sales_returns.sales if s.transaction_id == transaction_id), None)  # Go to IF condition if transaction ID matches product transaction ID
             if sale:
                 invoice = Invoice(sale)
                 invoice.generate_invoice()
