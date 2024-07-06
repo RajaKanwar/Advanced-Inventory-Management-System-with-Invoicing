@@ -8,6 +8,7 @@ def main():
 
     while True:
         # work or create a command-line interface (CLI) from the line
+        # Display menu options
         print("\n1. View Products")
         print("2. Add Product")
         print("3. Update Product")
