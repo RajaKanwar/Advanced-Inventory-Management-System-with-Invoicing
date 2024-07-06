@@ -20,5 +20,5 @@ class Inventory:
         if product_id in self.products:
             del self.products[product_id]
 
-    def view_products(self): # call product present values or product 
+    def view_products(self): # list of all product objects in the inventory.
         return self.products.values()
